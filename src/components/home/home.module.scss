@@ -1,24 +1,65 @@
 @import './../../assest/sass/variables';
+@import './../../assest/sass/mixins';
+@import './../../assest/sass/keyframes';
+
+@include keyframes;
 
 .home_page {
+    position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
+    .container {
+        @include container;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .social_links {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                width: 48px;
+                height: 48px;
+                margin-top: 4px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                img {
+                    width: 100%;
+                    filter: grayscale(0.5);
+
+                    &:hover {
+                        filter: grayscale(0);
+                        transition: 0.2s ease-in;
+
+                    }
+                }
+            }
+        }
+    }
+
     .title_wrapper {
         display: flex;
 
         .front_text,
         .title {
-
+            font-size: $title-size;
             position: relative;
 
             &::before {
                 content: '<';
                 position: absolute;
-                left: -10px;
+                left: -24px;
                 top: 0;
                 color: $gray;
             }
@@ -26,7 +67,7 @@
             &::after {
                 content: '/>';
                 position: absolute;
-                right: -20px;
+                right: -44px;
                 top: 0;
                 color: $gray;
             }
@@ -43,7 +84,7 @@
             .name {
                 font-family: $primary-font;
                 font-weight: $primary-font-weight;
-                font-size: 15.5px;
+                font-size: calc($title-size - 1px);
                 letter-spacing: 1.5px;
                 position: relative;
 
@@ -53,30 +94,44 @@
                     width: 100%;
                     height: 50%;
                     opacity: 0.1;
-                    bottom: 4px;
-                    right: 0;
+                    bottom: 9px;
+                    left: 0;
                     background-color: #8891bf;
+                    animation: width0to100 1s ease-in;
                 }
             }
         }
 
         .front_text {
             color: $white;
-            font-size: 8px;
             margin-top: 4px;
+            font-size: calc($title-size - 1px);
 
-            &::after {
-                right: -12px
-            }
-
-            &::before {
-                left: -6px;
-            }
-
-            span{
+            span {
                 font-family: $primary-font;
-                font-size: 7.5px;
             }
+        }
+    }
+
+    .scroll_down {
+        position: absolute;
+        bottom: 8px;
+        width: 30px;
+        height: 50px;
+        border: 1px solid $light-navy;
+        border-radius: 30px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 5px;
+            height: 8px;
+            left: 50%;
+            top: 8px;
+            border-radius: 15px;
+            background-color: $light-navy;
+            transform: translateX(-50%);
+            animation: scroll-down 0.9s linear infinite;
         }
     }
 
