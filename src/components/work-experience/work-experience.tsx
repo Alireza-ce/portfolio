@@ -23,7 +23,7 @@ export default function WorkExperience() {
             </div>
               <div className={classes.company_links}>
                 <p>Front end developer at</p>
-                <a href='#' className={classes.name}> Yara Information technology</a>
+                <a href='#' className={classes.name}> Yara</a>
               </div>
               <p className={classes.description}>a lot of inforamtion come here . to haminja bia angular o react ro benevis b bold ya rangeshon ro avaz kn</p>
             
