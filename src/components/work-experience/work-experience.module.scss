@@ -9,7 +9,7 @@
     align-items: center;
     position: relative;
     background-color: $light-navy;
-    padding: 12px 0;
+    padding: 24px 0;
 }
 
 .container {
@@ -51,7 +51,14 @@
 
         .work_time_line {
             position: relative;
-            padding: 0 16px;
+            padding: 8px 16px;
+            background-color: #8ad1bd;
+            border-radius: 8px;
+            transition: 0.3s;
+            margin-top: 12px;
+            &:hover{
+                box-shadow: 5px 5px 15px rgb(255 255 255 / 40%) ;
+            }
 
             &::before {
                 content: '';
@@ -66,27 +73,14 @@
 
             .company_info {
                 &:last-child {
-                    margin-top: 16px;
+                    margin-top: 32px;
                 }
 
                 .company_links {
                     display: flex;
                     align-items: center;
                     font-size: 22px;
-                    position: relative;
-
-
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        width: 0;
-                        height: 0;
-                        border-top: 4px solid transparent;
-                        border-left: 8px solid #0a222f;
-                        border-bottom: 4px solid transparent;
-                        left: -11px;
-                        top: 11px;
-                    }
+                   
 
                     p {
                         margin-right: 8px;
@@ -102,7 +96,29 @@
 
                 .date {
                     font-weight: $secondary-font-weight;
-                    font-style: italic;
+                    font-size: 13px;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 4px;
+                    margin-left: 4px;
+                    position: relative;
+
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        border-top: 4px solid transparent;
+                        border-left: 8px solid #0a222f;
+                        border-bottom: 4px solid transparent;
+                        left: -15px;
+                        top: 8px;
+                    }
+
+                    p{
+                        margin-left: 4px;
+                    }
                 }
             }
         }
