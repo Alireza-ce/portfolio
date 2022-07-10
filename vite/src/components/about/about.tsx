@@ -6,7 +6,7 @@ import website from './../../assest/img/web.png';
 
 export default function About() {
   return (
-    <div className={classes.about_page}>
+    <div className={classes.about_page} id="project">
       <div className={`${classes.row} ${classes.container}`}>
         <div className={classes.project_title}>
           <p className={classes.title}>
@@ -14,7 +14,7 @@ export default function About() {
           </p>
           <div className={classes.project_info}>
             <div className={classes.project_name}>
-              <p>Project name</p>
+              <p>Project name -- make this clicable to project website</p>
             </div>
             <p className={classes.project_tech}>React / JS / SCSS / FireBase -- rang ina bar asas logo khode company bashe </p>
             <div className={classes.project_links}>
@@ -63,6 +63,7 @@ export default function About() {
             </div>
 
             <img className={classes.project_pic} src={projectPic} />
+            <p>all project links come here</p>
           </div>
         </div>
 

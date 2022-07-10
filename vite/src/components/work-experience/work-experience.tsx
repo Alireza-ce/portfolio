@@ -11,7 +11,7 @@ export default function WorkExperience() {
   }, [])
 
   return (
-    <div className={classes.work_page}>
+    <div className={classes.work_page}  id="work">
       <div className={`${classes.container} ${classes.work_row}`}>
         <div className={classes.work_experience}>
           <p className={classes.title}>Work Experience</p>
