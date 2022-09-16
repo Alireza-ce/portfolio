@@ -1,0 +1,88 @@
+@import '../../public/sass/variables';
+@import '../../public/sass/mixins';
+
+.about_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 32px 0;
+
+
+    .container {
+        @include container;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .project_card,
+    .project_title {
+        width: 30%;
+    }
+
+    .project_title {
+        .title {
+            @include primary-title;
+            color: $light-navy;
+            position: relative;
+            margin-bottom: 12px;
+
+            &::before {
+                content: "Projects";
+                position: absolute;
+                left: -38px;
+                top: -6px;
+                transform: rotate(-27deg);
+                font-size: 10px;
+                color: white;
+            }
+        }
+    }
+
+    .project_info {
+        color: $white;
+        padding: 12px 0;
+        border-top: 1px solid $white;
+
+        .project_name,
+        .project_tech,
+        .project_links,
+        .project_pic {
+            margin-bottom: 8px;
+        }
+
+        .project_pic {
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .project_name {
+            font-size: 24px;
+        }
+
+        .project_links {
+            display: flex;
+
+            a {
+                margin-right: 12px;
+                width: 40px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+    .project_card {}
+
+    .health_project {
+        margin-top: 60px;
+    }
+}
