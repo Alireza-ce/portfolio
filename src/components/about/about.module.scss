@@ -56,13 +56,33 @@
             margin-bottom: 8px;
         }
 
+        .project_tech{
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
         .project_pic {
             border-radius: 4px;
             width: 100%;
+            transition: all 0.2s ease-in;
+            &:hover{
+                box-shadow: 0 4px 30px rgba(255,255,255, 0.1 );
+            }
         }
 
         .project_name {
+            display: flex;
+            align-items: center;
             font-size: 24px;
+
+            p{
+                margin-right: 4px;
+                font-size: 20px;
+            }
+
+            img{
+                width: 20px;
+            }
         }
 
         .project_links {
