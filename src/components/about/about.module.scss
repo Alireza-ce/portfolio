@@ -68,6 +68,7 @@
         .project_links {
             display: flex;
 
+
             a {
                 margin-right: 12px;
                 width: 40px;
@@ -75,6 +76,11 @@
                 img {
                     width: 100%;
                 }
+            }
+
+            .web{
+                -webkit-filter: grayscale(1) invert(0.9);
+                filter: grayscale(1) invert(0.9);
             }
 
         }

@@ -22,12 +22,12 @@
 
 
     .animation {
-        width: 39%;
+        width: 49%;
         text-align: center
     }
 
     .work_experience {
-        width: 59%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -73,8 +73,9 @@
             }
 
             .company_info {
-                &:last-child {
-                    margin-top: 32px;
+                margin-top: 32px;
+                &:first-child {
+                    margin-top: 12px;
                 }
 
                 .company_links {
@@ -89,9 +90,10 @@
                     }
 
                     a {
-                        color: $white;
+                        color: #1E3163;
                         font-family: $primary-font;
                         text-decoration: none;
+                        font-weight: bold;
                     }
                 }
 
@@ -121,6 +123,34 @@
                         margin-left: 4px;
                     }
                 }
+            }
+
+           
+        }
+        
+
+    }
+}
+
+.skills{
+    margin: 12px;
+
+    .skills_image{
+        display: flex;
+
+        .skills_item{
+            margin: 12px;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: $navy;
+            border-radius: 100%;
+            img{
+                width: 40px;
+                border-radius: 5px;
             }
         }
     }

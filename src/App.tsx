@@ -10,7 +10,7 @@ import WorkExperience from './components/work-experience/work-experience'
 function App() {
   return (
     <div className={classes.app}>
-      <Navbar />
+      {/* <Navbar /> */}
       <Home />
       <WorkExperience />
       <About />

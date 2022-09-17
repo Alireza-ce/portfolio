@@ -19,10 +19,10 @@ export default function About() {
             <p className={classes.project_tech}>React / JS / SCSS / FireBase -- rang ina bar asas logo khode company bashe </p>
             <div className={classes.project_links}>
               <a href="#">
-                <img src={github} alt="github" />
+                <img  src={github} alt="github" />
               </a>
               <a href="#">
-                <img src={website} alt="github" />
+                <img className={classes.web} src={website} alt="github" />
               </a>
             </div>
 
@@ -40,7 +40,7 @@ export default function About() {
                 <img src={github} alt="github" />
               </a>
               <a href="#">
-                <img src={website} alt="github" />
+              <img className={classes.web} src={website} alt="github" />
               </a>
             </div>
 
@@ -58,7 +58,7 @@ export default function About() {
                 <img src={github} alt="github" />
               </a>
               <a href="#">
-                <img src={website} alt="github" />
+              <img className={classes.web} src={website} alt="github" />
               </a>
             </div>
 
