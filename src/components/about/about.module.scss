@@ -18,11 +18,18 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @media(max-width:468px) {
+           flex-direction: column;
+        }
     }
 
     .project_card,
     .project_title {
         width: 30%;
+        @media(max-width:468px) {
+            width: 100%;
+         }
     }
 
     .project_title {
@@ -111,5 +118,26 @@
 
     .health_project {
         margin-top: 60px;
+    }
+}
+
+.allProjects{
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+
+    a{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        img{
+            width: 50px;
+            transition: all 0.2s ease-in;
+            &:hover{ 
+                scale: 1.1;
+            }
+        }
     }
 }

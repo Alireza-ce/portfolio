@@ -5,6 +5,10 @@
     max-width: 1024px;
     margin: auto;
     padding: 0 8px;
+
+    @media(max-width:468px) {
+        padding: 0 24px;
+     }
 }
 
 @mixin primary-title {

@@ -10,6 +10,8 @@
     position: relative;
     background-color: $light-navy;
     padding: 24px 0;
+
+
 }
 
 .container {
@@ -20,10 +22,17 @@
     display: flex;
     justify-content: space-between;
 
+    @media(max-width:768px) {
+        flex-direction: column;
+    }
 
     .animation {
         width: 49%;
-        text-align: center
+        text-align: center;
+
+        @media(max-width:768px) {
+            width: 100%;
+        }
     }
 
     .work_experience {
@@ -31,6 +40,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @media(max-width:768px) {
+            width: 100%;
+        }
 
         .title {
             @include primary-title;
@@ -51,15 +64,15 @@
         .work_time_line {
             position: relative;
             padding: 8px 16px;
-           
+
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.2);
-           
+
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
             margin-top: 12px;
-            
+
 
             &::before {
                 content: '';
@@ -74,6 +87,7 @@
 
             .company_info {
                 margin-top: 32px;
+
                 &:first-child {
                     margin-top: 12px;
                 }
@@ -82,7 +96,7 @@
                     display: flex;
                     align-items: center;
                     font-size: 22px;
-                   
+
 
                     p {
                         margin-right: 8px;
@@ -95,7 +109,8 @@
                         font-family: $primary-font;
                         text-decoration: none;
                         font-weight: bold;
-                        &::before{
+
+                        &::before {
                             content: "";
                             position: absolute;
                             width: 100%;
@@ -131,26 +146,27 @@
                         top: 8px;
                     }
 
-                    p{
+                    p {
                         margin-left: 4px;
                     }
                 }
             }
 
-           
+
         }
-        
+
 
     }
 }
 
-.skills{
+.skills {
     margin: 12px;
 
-    .skills_image{
+    .skills_image {
         display: flex;
+        justify-content: center;
 
-        .skills_item{
+        .skills_item {
             margin: 12px;
             width: 70px;
             height: 70px;
@@ -160,9 +176,18 @@
             align-items: center;
             background-color: $navy;
             border-radius: 100%;
-            img{
+
+            @media(max-width:468px) {
+                width: 50px;
+                height: 50px;
+            }
+            img {
                 width: 40px;
                 border-radius: 5px;
+
+                @media(max-width:468px) {
+                    width: 30px;
+                }
             }
         }
     }

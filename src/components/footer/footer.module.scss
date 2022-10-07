@@ -21,6 +21,9 @@
     justify-content: space-between;
     align-items: center;
 
+    @media(max-width:468px) {
+        flex-direction: column;
+     }
     a{
         color: $light-navy;
         text-decoration: none;
