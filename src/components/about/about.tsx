@@ -8,6 +8,7 @@ import website from './../../assest/img/web.png';
 import heart from './../../assest/img/heart.png';
 import pacman from './../../assest/img/pacman.png';
 import budget from './../../assest/img/budget.png';
+import { motion } from 'framer-motion';
 
 export default function About() {
   return (
@@ -17,7 +18,7 @@ export default function About() {
           <p className={classes.title}>
             Latest <br></br>Projects
           </p>
-          <div className={classes.project_info}>
+          <motion.div className={classes.project_info} initial={{ scale: 0 }} transition={{delay:0, type: 'spring', duration: 1.5 }} whileInView={{ scale: 1 }} viewport={{ once: true }}>
             <div className={classes.project_name}>
               <p>Heart Rate Analysis System</p>
               <img  src={heart} />
@@ -30,9 +31,9 @@ export default function About() {
             </div>
 
             <img className={classes.project_pic} src={projectPic} />
-          </div>
+          </motion.div>
         </div>
-        <div className={`${classes.project_card} ${classes.health_project}`}>
+        <motion.div className={`${classes.project_card} ${classes.health_project}`} initial={{ scale: 0 }} transition={{delay:0.5, type: 'spring', duration: 1.5 }} whileInView={{ scale: 1 }} viewport={{ once: true }}>
           <div className={classes.project_info}>
             <div className={classes.project_name}>
               <p>Pacman</p>
@@ -50,8 +51,8 @@ export default function About() {
 
             <img className={classes.project_pic} src={pacmanPic} />
           </div>
-        </div>
-        <div className={`${classes.project_card}`}>
+        </motion.div>
+        <motion.div className={`${classes.project_card}`} initial={{ scale: 0 }} transition={{delay:0.7, type: 'spring', duration: 1.5 }} whileInView={{ scale: 1 }} viewport={{ once: true }}>
           <div className={classes.project_info}>
             <div className={classes.project_name}>
               <p>Expenses Management</p>
@@ -65,7 +66,7 @@ export default function About() {
             </div>
             <img className={classes.project_pic} src={expenses} />
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </div>

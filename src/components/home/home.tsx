@@ -3,6 +3,7 @@ import classes from './home.module.scss'
 import git from './../../assest/img/github.png';
 import linkedIn from './../../assest/img/linkedin.png';
 import gmail from './../../assest/img/gmail.png';
+import { motion } from 'framer-motion';
 
 export default function Home() {
     const scrollList = useRef<any>([]);
@@ -47,27 +48,27 @@ export default function Home() {
     }, [])
 
     return (
-        <div className={classes.home_page}>
+        <div className={classes.home_page} >
             <div className={classes.cursor} ref={cursor}></div>
             <div className={`${classes.container} ${classes.row}`}>
                 <div className={classes.info}>
-                    <div className={classes.title_wrapper} >
+                    <motion.div className={classes.title_wrapper}  initial={{ x:'-100vw' }} animate={{ x: 0 }} transition={{ type: 'spring', delay: 1.5 , duration: 1}} >
                         <p className={classes.title} ref={handleRef} data-rate='.1' data-scroll='vertical'>
                             Hi
                         </p>
-                    </div>
-                    <div className={classes.title_wrapper} >
+                    </motion.div>
+                    <motion.div className={classes.title_wrapper}  initial={{ x:'-100vw' }} animate={{ x: 0 }} transition={{ type: 'spring', delay: 1.8 , duration: 1}}>
                         <p className={classes.title} ref={handleRef} data-rate='.2' data-scroll='vertical'>
                             I'm <span className={classes.name}>Alireza</span>
                         </p>
-                    </div>
-                    <div className={classes.title_wrapper} >
+                    </motion.div>
+                    <motion.div className={classes.title_wrapper}  initial={{ x:'-100vw' }} animate={{ x: 0 }} transition={{ type: 'spring', delay: 2 , duration: 1}}>
                         <p className={classes.front_text} ref={handleRef} data-rate='.3' data-scroll='vertical'>
                             <span>Front End Developer</span>
                         </p>
-                    </div>
+                    </motion.div>
                 </div>
-                <div className={classes.social_links}>
+                <motion.div className={classes.social_links} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ type: 'tween', delay: 2 , duration:1}}>
                     <a href='https://github.com/Alireza-ce' target="_blank" >
                         <img src={git} alt="github" />
                     </a>
@@ -77,7 +78,7 @@ export default function Home() {
                     <a href="mailto:rezaei.alireza.ce@gmail.com" >
                         <img src={gmail} alt="gmail" />
                     </a>
-                </div>
+                </motion.div>
             </div>
             <div className={classes.scroll_down}></div>
         </div>
