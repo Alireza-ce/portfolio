@@ -6,7 +6,8 @@ export default function Footer() {
         <div className={classes.footer}>
             <div className={classes.container}>
                 <div className={classes.links}>
-                <a href='#work'>inja daghighan mesl ui on pesar zarde beshe</a>
+                    <a href='mailto:rezaei.alireza.ce@gmail.com'>Rezae.Alireza.CE@gmail.com</a>
+                    <a href='#'>© 2022 All Right Reserved</a>
                 </div>
             </div>
         </div>

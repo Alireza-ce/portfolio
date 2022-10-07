@@ -17,8 +17,11 @@
 
 .links{
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     a{
-        margin-right: 24px;
         color: $light-navy;
         text-decoration: none;
     }
