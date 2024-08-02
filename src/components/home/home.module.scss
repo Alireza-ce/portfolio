@@ -21,17 +21,23 @@
         justify-content: space-between;
         flex-wrap: wrap;
 
-        .social_links {
+        .info{
             display: flex;
             flex-direction: column;
+            justify-content: center;
+        }
+
+        .social_links {
+            display: flex;
+            align-items: center;
 
             a {
                 width: 48px;
                 height: 48px;
-                margin-top: 4px;
+                margin-left: 12px;
 
                 &:first-child {
-                    margin-top: 0;
+                    margin-left: 0;
                 }
 
                 @keyframes hue {
@@ -49,6 +55,14 @@
                     animation: hue 10s linear infinite;
                 }
             }
+        }
+    }
+
+    .spline_home{
+        margin: 24px 0;
+
+        @media (max-width: 500px) {
+            display: none
         }
     }
 

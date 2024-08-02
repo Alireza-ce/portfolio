@@ -68,8 +68,7 @@ export default function Home() {
                             <span>Front End Developer</span>
                         </p>
                     </motion.div>
-                </div>
-                <motion.div className={classes.social_links} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ type: 'tween', delay: 2 , duration:1}}>
+                        <motion.div className={classes.social_links} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ type: 'tween', delay: 2 , duration:1}}>
                     <a href='https://github.com/Alireza-ce' target="_blank" >
                         <img src={git} alt="github" />
                     </a>
@@ -80,8 +79,14 @@ export default function Home() {
                         <img src={gmail} alt="gmail" />
                     </a>
                 </motion.div>
+                </div>
+                <div className={classes.spline_home}>
+                         <Spline scene="/src/scene.splinecode" />
+                </div>
+            
             </div>
-            <div className={classes.scroll_down}></div>
+            
+            {/* <div className={classes.scroll_down}></div> */}
         </div>
     )
 }
