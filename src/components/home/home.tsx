@@ -3,6 +3,7 @@ import classes from './home.module.scss'
 import git from './../../assest/img/github.png';
 import linkedIn from './../../assest/img/linkedin.png';
 import gmail from './../../assest/img/gmail.png';
+import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
 
 export default function Home() {

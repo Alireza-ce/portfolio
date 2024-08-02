@@ -27,7 +27,11 @@
     }
 
     .animation {
-        width: 49%;
+        width: 44%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
 
         @media(max-width:768px) {
@@ -36,7 +40,7 @@
     }
 
     .work_experience {
-        width: 50%;
+        width: 55%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -100,7 +104,7 @@
 
                     p {
                         margin-right: 8px;
-                        font-weight: 500;
+                        font-weight: bold;
                     }
 
                     a {
@@ -122,6 +126,11 @@
                             animation: _width0to100_1fc57_1 1s ease-in;
                         }
                     }
+
+                    img{
+                        width: 45px;
+                        margin-left: 20px;
+                    }
                 }
 
                 .date {
@@ -132,18 +141,12 @@
                     margin-bottom: 4px;
                     margin-left: 4px;
                     position: relative;
+                    font-weight: bold;
 
 
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        width: 0;
-                        height: 0;
-                        border-top: 4px solid transparent;
-                        border-left: 8px solid #0a222f;
-                        border-bottom: 4px solid transparent;
-                        left: -15px;
-                        top: 8px;
+                    img{
+                        width: 25px;
+                        margin-right: 8px;
                     }
 
                     p {

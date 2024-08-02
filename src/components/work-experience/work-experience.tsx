@@ -1,11 +1,14 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 import React, { useEffect, useRef } from 'react'
-import calendar from './../../assest/img/schedule.png';
+import calendar from './../../assest/img/3d-calendar.png';
 import reactLogo from './../../assest/img/reactlogo.png';
 import AngularLogo from './../../assest/img/angular.png';
 import nextjs from './../../assest/img/nextjs.png';
 import tsLogo from './../../assest/img/ts.png';
 import jsLogo from './../../assest/img/javascript.png';
+import tapsiLogo from './../../assest/img/tapsi-logo.png'
+import yaraLogo from './../../assest/img/yara-logo.png'
+import dbSolutuionLogo from './../../assest/img/db-solution-logo.png'
 import classes from './work-experience.module.scss';
 import animationData from './working-man.json';
 import { motion } from 'framer-motion';
@@ -30,6 +33,7 @@ export default function WorkExperience() {
               <div className={classes.company_links}>
                 <p>Front end developer at</p>
                 <a href='https://tapsi.ir/' className={classes.name} target="_blank"> TAPSI</a>
+                <img src={tapsiLogo} alt="tapsi" />
               </div>
             </motion.div>
 
@@ -41,6 +45,7 @@ export default function WorkExperience() {
               <div className={classes.company_links}>
                 <p>Front end developer at</p>
                 <a href='https://yaramobile.com/' className={classes.name} target="_blank"> Yara</a>
+                <img src={yaraLogo} alt="yara" />
               </div>
             </motion.div>
             <motion.div className={classes.company_info} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ type: 'tween', delay: 1.5 , duration:1}} viewport={{ once: true }}>
@@ -51,6 +56,7 @@ export default function WorkExperience() {
               <div className={classes.company_links}>
                 <p>Front end developer at</p>
                 <a href='#' className={classes.name}> D.B. Solution</a>
+                <img src={dbSolutuionLogo} alt="db-solution" />
               </div>
             </motion.div>
           </div>
@@ -63,25 +69,7 @@ export default function WorkExperience() {
             style={{ height: '300px', width: '100%' }}
           >
           </Player>
-          <motion.div className={classes.skills} initial={{ scale: 0 }} transition={{delay:0, type: 'spring', duration: 1.5 }} whileInView={{ scale: 1 }} viewport={{ once: true }}>
-            <div className={classes.skills_image}>
-              <div className={classes.skills_item}>
-                <img src={reactLogo} />
-              </div>
-              <div className={classes.skills_item}>
-                <img src={nextjs} />
-              </div>
-              <div className={classes.skills_item}>
-                <img src={AngularLogo} />
-              </div>
-              <div className={classes.skills_item}>
-                <img src={jsLogo} />
-              </div>
-              <div className={classes.skills_item}>
-                <img src={tsLogo} />
-              </div>
-            </div>
-          </motion.div>
+
         </div>
       </div>
     </div>
