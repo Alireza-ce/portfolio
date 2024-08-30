@@ -7,6 +7,8 @@ import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
 
 export default function Home() {
+    const spline = new URL('./../../assest/scene.splinecode', import.meta.url).href;
+
     const scrollList = useRef<any>([]);
     const cursor = useRef<any>(null)
 
@@ -81,7 +83,7 @@ export default function Home() {
                 </motion.div>
                 </div>
                 <div className={classes.spline_home}>
-                         <Spline scene="/src/scene.splinecode" />
+                         <Spline scene={spline} />
                 </div>
             
             </div>
